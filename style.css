@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ff-main: 'Staatliches';
+  --ff-second: 'Palanquin';
+  
+  --bgcolor-main: #EFF1FF;
+  --bgcolor-second: #8E9AAF;
+  --bgcolor-third:#FEEAFA;
+
+  font-size: 62.5%;
+
+}
+.mobile-hidden {
+  display: none;
+}
+
+.mobile-hidden-img {
+  display: none;
+}
+body::before {
+  content: '';
+  background: #8E9AAF;
+  position: absolute;
+  left: 0;
+  z-index: -2;
+  width: 100%;
+  height: 27.9rem;
+}
+body {
+  background: var(--bgcolor-main);
+  height: 100vh;
+}
+.page {
+  margin: 0 auto;
+  text-align: center;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+#logo {
+  width: 17.7rem;
+  height: 13.7rem;
+  align-self: center;
+  margin: 3.2rem auto;
+}
+header h1 {
+  font-family: var(--ff-main);
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 3.4rem;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+
+  padding: 1rem 0;
+
+  background:#cbc0d3;
+  width: 100%;
+}
+p {
+  width: 30.5rem;
+  margin: 5rem auto 6.3rem;
+  text-align: center;
+
+  font-family: var(--ff-second);
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  color: #23053A;
+
+  padding: 1.4rem 0 3.2rem;
+}
+.cards {
+  margin-bottom: 6rem;
+}
+main {
+  margin: auto;
+  width: 32rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+.card {
+  position: relative;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+
+.card h2 {
+  font-family: var(--ff-main);
+  font-size: 2rem;
+  text-transform: uppercase;
+  line-height: 3.4rem;
+  letter-spacing: 0.05em;
+
+  color:#4A4E69;
+
+  background: var(--bgcolor-third);
+  border-radius: 2rem;
+  padding: 0 2.3rem;
+
+  position: absolute;
+  top: 1.7rem;
+  right: 1.6rem;
+}
+img {
+  animation: downtop 700ms 350ms backwards;
+}
+
+.card h2 {
+  animation: topdown 700ms 350ms backwards;
+}
+
+@keyframes downtop {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes topdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  }
+  @media (min-width: 1100px) {
+    .desktop-hidden {
+      display: none;
+    }
+  
+    .mobile-hidden {
+      display: flex;
+    }
+  
+    body::before {
+      background: none;
+    }
+    .page {
+      display: flex;
+    }
+  
+    .side {
+      background: #8E9AAF;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      position: relative;
+    }
+  
+    header {
+      min-width: 37.7rem;
+    }
+  
+    #logoB {
+      width: 21.5rem;
+      height: 16.7rem;
+      align-self: center;
+      margin: 3.2rem auto;
+  
+  
+      animation: stretch 1s ease-out 0s alternate;
+    }
+  
+    .col1 {
+      animation: downtop 1000ms 0s backwards;
+    }
+  
+    .col2 {
+      animation: downtop 700ms 300ms backwards;
+    }
+  
+    .col3 {
+      animation: downtop 400ms 600ms backwards;
+    }
+  
+    h1 {
+      font-size: 4.8rem;
+      padding: 2rem 0;
+    }
+  
+    p {
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+      color: #4a4e68;
+  
+      padding: 0;
+      margin: 5.2rem 4.8rem 12.5rem;
+    }
+  
+    .cards {
+      width: 100%;
+      margin: 6.4rem 8.1rem 0rem 9.8rem;
+      text-align: center;
+    }
+  
+    main {
+      width: 100%;
+      display: grid;
+      justify-content: space-evenly;
+      gap: 3.2rem;
+      grid-template-areas:
+        'A B'
+        'D B'
+        'D C';
+    }
+  
+    main div:nth-child(1) {
+      grid-area: A;
+    }
+    main div:nth-child(2) {
+      grid-area: B;
+    }
+    main div:nth-child(3) {
+      grid-area: C;
+    }
+    main div:nth-child(4) {
+      grid-area: D;
+    }
+    main div:nth-child(5) {
+      grid-area: E;
+    }
+    main div:nth-child(6) {
+      grid-area: F;
+    }
+  
+    img {
+      object-fit: cover;
+    }
+  
+    h2 {
+      display: none;
+    }
+  
+    footer {
+      font-family: var(--ff-second);
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 2.8rem;
+      margin: 5rem 0;
+      color: #4a4e68;
+      justify-content: center;
+      display: inline;
+    }
+  
+    a {
+      text-decoration: none;
+      font-weight: 700;
+      color: #4a4e68;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .mobile-hidden-img {
+      display: flex;
+    }
+    main {
+      width: 100%;
+      display: grid;
+      justify-content: space-evenly;
+      gap: 3.2rem;
+  
+      grid-template-areas:
+        'A B E'
+        'D B F'
+        'D C F';
+    }
+  }
+
+   
